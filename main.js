@@ -1,5 +1,5 @@
 const ExcelJS = require('exceljs');
-const filename = "Barrons Words.xlsx";
+const filename = "wordlist.xlsx";
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080
