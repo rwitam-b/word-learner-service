@@ -24,10 +24,12 @@ function isValidSet(setValue) {
 $("#reveal").click(() => {
     $(".card-text").show("slow");
     $("#next").toggleClass("disabled");
+    $("#reveal").toggleClass("disabled");
 });
 
 $("#next").click(() => {
     presentWord = getRandomWord();
     setData();
     $("#next").toggleClass("disabled");
+    $("#reveal").toggleClass("disabled");
 });
