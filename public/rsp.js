@@ -7,7 +7,7 @@ $(document).ready(() => {
         // Load one set of words onto the page
         startingSet = parseInt(startingSet);
         lastSet = parseInt(lastSet);
-        fetch(`/api/words/set/${startingSet}-${lastSet}`).then(response => response.json()).then(data => {
+        fetch(`${window.location.origin}/api/words/set/${startingSet}-${lastSet}`).then(response => response.json()).then(data => {
             words = data;
             if (words.length > 0) {
                 presentWord = getRandomWord();

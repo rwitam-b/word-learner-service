@@ -22,14 +22,18 @@ function isValidSet(setValue) {
 }
 
 $("#reveal").click(() => {
-    $(".card-text").show("slow");
-    $("#next").toggleClass("disabled");
-    $("#reveal").toggleClass("disabled");
+    if (!$("#reveal").hasClass("disabled")) {
+        $(".card-text").show("slow");
+        $("#next").toggleClass("disabled");
+        $("#reveal").toggleClass("disabled");
+    }
 });
 
 $("#next").click(() => {
-    presentWord = getRandomWord();
-    setData();
-    $("#next").toggleClass("disabled");
-    $("#reveal").toggleClass("disabled");
+    if (!$("#next").hasClass("disabled")) {
+        presentWord = getRandomWord();
+        setData();
+        $("#next").toggleClass("disabled");
+        $("#reveal").toggleClass("disabled");
+    }
 });
