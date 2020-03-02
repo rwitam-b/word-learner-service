@@ -53,9 +53,9 @@ async function main() {
         try {
             let setNumber = parseInt(req.params.setNumber);
             let lowerLimit = ((setNumber - 1) * 10);
-            let upperLimit = setNumber * 10;
+            let upperLimit = (setNumber * 10) - 1;
             if (lowerLimit >= 0 && lowerLimit < words.length && upperLimit < words.length) {
-                res.send(words.slice(lowerLimit, upperLimit));
+                res.send(words.slice(lowerLimit, upperLimit + 1));
             } else {
                 res.send([]);
             }
